@@ -1,0 +1,29 @@
+{
+  "name": "babel-plugin-idea",
+  "version": "1.0.0",
+  "description": "babel常见的用于代码的es6语法的转换、也用于处理ts等其他语法的转义。也可以用来处理编译过程中代码生成的ast树，ast树本质就是代码的`抽象tree`的结构，我们可以通过这个抽象节点的描绘然后使用plugin和loader，生成你需要的代码处理，比如你可以实现storybook的文档注释直接解析成一个文档对象，实现自动的数据埋点、根据ast结构优化js的编译优化等。",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node plugin/index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ccj-007/babel-plugin-idea.git"
+  },
+  "keywords": [],
+  "author": "chase chen <596487930@qq.com> (https://github.com/ccj-007)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ccj-007/babel-plugin-idea/issues"
+  },
+  "homepage": "https://github.com/ccj-007/babel-plugin-idea#readme",
+  "dependencies": {
+    "@babel/core": "^7.19.0",
+    "@babel/generator": "^7.19.0",
+    "@babel/parser": "^7.19.0",
+    "@babel/template": "^7.18.10",
+    "@babel/traverse": "^7.19.0",
+    "@babel/types": "^7.19.0"
+  }
+}
