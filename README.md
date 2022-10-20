@@ -9,3 +9,22 @@ ast树本质就是代码的`抽象tree`的结构，我们可以通过这个抽�
 > babel的执行原理：
 
 ![](babel.jpg)
+
+> 分析babel ast节点的工具
+
+[](https://astexplorer.net/#/gist/7267e806bfec60b48b9d39d039f29313/c343ad5a76a8dd78c22d39ce89f4d0733c2b17e4)
+
+> 常见的ast节点
+  - 标识符 indentifer
+  - 字面量 literal
+  - 语句 statement
+  - 声明语句 Declaration
+  - 表达式 Expression
+  - class、 module、file、program、 directive、comment
+  
+> 常用的操作visitor对象的方法：
+
+  - path.traverse(visitor, state)
+
+  - get(key)  获取某个属性的path
+
