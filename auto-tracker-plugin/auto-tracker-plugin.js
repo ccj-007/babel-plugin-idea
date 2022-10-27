@@ -50,7 +50,6 @@ const autoTrackPlugin = declare((api, options, dirname) => {
           //没有函数体，则需要包裹 （箭头函数）
           const ast = api.template.statement(`{${state.trackerImportId}();return PREV_BODY;}`)({ PREV_BODY: bodyPath.node });
           //PREV_BODY 做替换
-
           // console.log("ast", ast)
           bodyPath.replaceWith(ast);
         }

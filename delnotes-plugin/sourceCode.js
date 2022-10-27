@@ -1,20 +1,15 @@
-import aa from 'aa';
-import * as bb from 'bb';
-import { cc } from 'cc';
-import 'dd';
-// import _tracker2 from "tracker";
-function a () {
-  console.log('aaa');
+const c = () => {
+  console.log("11111");
+  let d = 'ccc'
 }
 
-class B {
-  bb () {
-    return 'bbb';
-  }
+let console = console.log
+//@log-ignore
+console.log("22222");
+function aa () {
+  /* @log-ignore */
+  let console = '22323'
+  console.log('asdasda');
 }
 
-const c = () => 'ccc';
 
-const d = function () {
-  console.log('ddd');
-}

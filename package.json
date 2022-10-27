@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/ccj-007/babel-plugin-idea#readme",
   "dependencies": {
+    "@babel/code-frame": "^7.18.6",
     "@babel/core": "^7.19.0",
     "@babel/generator": "^7.19.0",
     "@babel/helper-module-imports": "^7.18.6",

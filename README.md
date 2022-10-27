@@ -28,3 +28,30 @@ ast树本质就是代码的`抽象tree`的结构，我们可以通过这个抽�
 
   - get(key)  获取某个属性的path
 
+> 内置功能
+
+  syntax plugin 用于在写插件的时候解析ts、jsx、flow
+  transfrom plugin  用于语言特性的转换、ts、jsx
+
+  preset 工具集
+  helper 将通用的ast操作逻辑复用
+  babel-runtime 会打包构建产物中、corejs、regenergator、helper
+
+> preset 根据目标语言版本来指定一系列插件
+
+  如果代码本身就没有es6，需要指定版本，减轻runtime包体积，为了适配浏览器版本、node、electron，通过babel7 @babel/compat-data维护了特性与目标环境的映射关系
+
+  可以通过@babel/preset-env指定usage自动按需引入polyfill、target设置目标环境
+
+> helper -> runtime
+
+usage自动引入，如果每个文件都去引用，会冗余helper、polyfill污染全局环境
+
+解决方法： `模块化`
+
+**babel8解决方案**
+@babel/plugin-transforo-runtime， 但是helper不支持targets过滤  
+
+**babel8解决方案**
+@babel/plugin-transform-runtime 不支持根据 targets 的过滤，和 @babel/preset-env 配合时有问题，这个在 babel8 中得到了解决。babel8 提供了很多 babel polyfill 包，支持了 polyfill provider 的配置，而且还可以选择注入方式。不再需要 @babel/plugin-transform-runtime 插件了。
+
