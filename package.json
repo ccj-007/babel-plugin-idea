@@ -27,6 +27,9 @@
     "@babel/parser": "^7.19.0",
     "@babel/template": "^7.18.10",
     "@babel/traverse": "^7.19.0",
-    "@babel/types": "^7.19.0"
+    "@babel/types": "^7.19.0",
+    "chain-get": "^1.0.2",
+    "doctrine": "^3.0.0",
+    "fs-extra": "^10.1.0"
   }
 }

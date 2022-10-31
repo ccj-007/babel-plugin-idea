@@ -21,7 +21,23 @@ ast树本质就是代码的`抽象tree`的结构，我们可以通过这个抽�
   - 声明语句 Declaration
   - 表达式 Expression
   - class、 module、file、program、 directive、comment
-  
+
+> babel包
+### 集成包
+
+@babel/cli  
+@babel/preset-env
+@babel/preset-typescipt
+### 工具包
+@babel/parser  用于生成ast语法树
+@babel/core     babel核心的api，主要用于转换的基础
+@babel/generator 生成最终代码  sourceMap
+@babel/code-frame 代码定位
+@babel/runtime    运行时库，用于重复导入复用函数， 使用@babel-plugin-transfrom-runtime
+@babel/template    批量更新修改节点
+@babel/traverse   遍历更新节点
+@babel/types     构建ast树，静态类型
+
 > 常用的操作visitor对象的方法：
 
   - path.traverse(visitor, state)
@@ -54,4 +70,3 @@ usage自动引入，如果每个文件都去引用，会冗余helper、polyfill�
 
 **babel8解决方案**
 @babel/plugin-transform-runtime 不支持根据 targets 的过滤，和 @babel/preset-env 配合时有问题，这个在 babel8 中得到了解决。babel8 提供了很多 babel polyfill 包，支持了 polyfill provider 的配置，而且还可以选择注入方式。不再需要 @babel/plugin-transform-runtime 插件了。
-
